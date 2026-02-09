@@ -1,0 +1,25 @@
+- name: data types in ansible
+  hosts: local
+  connection: local
+  vars:
+    PROGRAM: "DevsecOps with aws"
+    DURATION: 140
+    IS_LIVE: true
+    DETAILS: 
+       months: 4
+       trainer: Siva
+    TOPICS:
+      - Linux
+      - aws
+      - ansible
+      - shell
+
+  tasks:
+    - name: data types
+      ansible.builtin.debug:
+        msg: |  # This pipe is for below multiple lines
+          program : {{ PROGRAM }}
+          Duration: {{ DURATION }}
+          is_live?: {{ IS_LIVE }}
+          Details :  {{ DETAILS }}
+          Topics :  {{ TOPICS }}
