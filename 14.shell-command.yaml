@@ -1,0 +1,13 @@
+- name: command vs shell
+  hosts: local
+  connection: local
+  tasks:
+    # - name: command module
+    #   ansible.builtin.command: cat /etc/passwd | grep root # This type of redirection or piping is not allowed with command , so use shell
+    - name: shell module
+      ansible.builtin.shell: cat /etc/passwd | grep root 
+      register: user_output
+      
+    - name: print output 
+      ansible.builtin.debug:
+        msg: "the op is {{ user_output }}"
