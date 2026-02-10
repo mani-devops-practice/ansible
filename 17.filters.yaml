@@ -6,7 +6,7 @@
     tagsMap:
        name: "ansible"
        project: "roboshop"
-       compnent: "catalogue"
+       component: "catalogue"
     tagsList: [
         {
             "key": "name",
@@ -17,13 +17,22 @@
             "value": "roboshop"
         },
         {
-            "key": "compnent",
+            "key": "component",
             "value": "catalogue"
         }
     ]
+
       #  - {"key":"name", "value": "ansible"}
-      #  - {"key":"name", "value": "roboshop"}
-      #  - {"key":"name", "value": "catalogue"}
+      #  - {"key":"project", "value": "roboshop"}  # Both are same, can be used how we like
+      #  - {"key":"component", "value": "catalogue"}
+
+      # - key: name     # We can represent key/value like below also
+      #   value: ansible
+      # - key: project
+      #   value: roboshop
+      # - key: component
+      #   value: catalogue
+       
   tasks:
     - name: Filters example
       ansible.builtin.debug:
