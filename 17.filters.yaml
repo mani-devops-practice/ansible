@@ -8,9 +8,7 @@
        project: "roboshop"
        compnent: "catalogue"
     tagsList:
-       - {"key":"name", "value": "ansible"}
-       - {"key":"name", "value": "roboshop"}
-       - {"key":"name", "value": "catalogue"}
+       - {"key":"name", "value": "ansible", {"key":"name", "value": "roboshop"} , {"key":"name", "value": "catalogue"}}
   tasks:
     - name: Filters example
       ansible.builtin.debug:
